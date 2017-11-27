@@ -1,0 +1,15 @@
+.initially-hidden {
+  display: none;
+}
+
+#restart {
+  background-image: url("../img/losebear.gif");
+  min-height: 50vw;
+}
+
+body {
+  background-image: url("../img/bear.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vw;
+}

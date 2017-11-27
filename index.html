@@ -3,11 +3,28 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="build/css/vendor.css">
-    <script src="build/js/vendor.min.js"></script>
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="build/js/vendor.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
-    <title>blank-js-project</title>
+    <title>Hungry Bear</title>
   </head>
   <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Hungry Bear Game</h1>
+      </div>
+      <form id="start">
+         <button type="submit" name="button" class="btn btn-success">Start Game</button>
+      </form>
+      <form id="game" class="initially-hidden">
+        <button type="button" name="feed" id="feed" class="btn btn-warning">FEED THE BEAR</button>
+        <button type="button" name="isEaten" id="isEaten" class="btn btn-warning">Did you get eaten?</button>
+      </form>
+      <div id="bear-status">
+      </div>
+      <div id="restart" class="initially-hidden">
+        <button type="button" name="restart-game" id="restart-game" class="btn btn-info">Restart Game?</button>
+      </div>
+    </div>
   </body>
 </html>

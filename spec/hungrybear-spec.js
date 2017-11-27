@@ -34,7 +34,7 @@ describe('HungryBear', function() {
   it('should have a food level of ten if it is fed', function(){
     jasmine.clock().tick(9001);
     fuzzy.feed();
-    expext(fuzzy.foodLevel).toEqual(10);
-  
+    expect(fuzzy.foodLevel).toEqual(10);
+
   });
 });
