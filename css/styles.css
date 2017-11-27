@@ -1,3 +1,30 @@
+/*turn off progress bar default*/
+progress,          /* All HTML5 progress enabled browsers */
+progress[role]     /* polyfill */
+{
+	/* Turns off styling - not usually needed, but good to know. */
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	/* gets rid of default border in Firefox and Opera. */
+	border: none;
+	/* Needs to be in here for Safari polyfill so background images work as expected. */
+	background-size: auto;
+	/* Dimensions */
+
+	width: 290px;
+	height: 30px;
+}
+/* Polyfill */
+progress[role]:after {
+	background-image: none; /* removes default background from polyfill */
+}
+/* Ensure fallback text doesn't appear in polyfill */
+progress[role] strong {
+	display: none;
+}
+/*end progress bar turn off default*/
+
 .initially-hidden {
   display: none;
 }
@@ -13,4 +40,39 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vw;
+}
+
+progress,                          /* Firefox  */
+progress[role][aria-valuenow] {    /* Polyfill */
+   background: #c6c6c6 !important; /* !important is needed by the polyfill */
+}
+
+/* Chrome */
+progress::-webkit-progress-bar {
+    background: #c6c6c6;
+}
+
+/* IE10 */
+progress {
+    color: #75180e;
+}
+
+/* Firefox */
+progress::-moz-progress-bar {
+    background: #75180e;
+}
+
+/* Chrome */
+progress::-webkit-progress-value {
+    background: #75180e;
+    box-shadow: 2px solid black;
+}
+
+/* Polyfill */
+progress[aria-valuenow]:before  {
+    background: #75180e;
+}
+
+#food-level {
+  margin-top: 10px;
 }

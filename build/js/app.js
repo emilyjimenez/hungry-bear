@@ -28,7 +28,7 @@ var HungryBear = exports.HungryBear = function () {
         if (_this.foodLevel === 0) {
           clearInterval(interval);
         }
-      }, 1000);
+      }, 1500);
     }
   }, {
     key: "didYouGetEaten",
@@ -63,6 +63,15 @@ function startGame() {
   $("#game").slideDown();
 }
 
+function updateFoodLevelBar() {
+  var interval = setInterval(function () {
+    $("#food-level").attr("value", newBear.foodLevel);
+    if (newBear.foodLevel === 0) {
+      clearInterval(interval);
+    }
+  }, 1500);
+}
+
 function isEaten() {
   newBear.didYouGetEaten();
   if (newBear.foodLevel > 0) {
@@ -81,6 +90,7 @@ $(document).ready(function () {
   $("#start").submit(function (event) {
     event.preventDefault();
     startGame();
+    updateFoodLevelBar();
   });
   $("#isEaten").click(function () {
     isEaten();

@@ -12,7 +12,7 @@ export class HungryBear {
       if (this.foodLevel === 0) {
         clearInterval(interval);
       }
-    }, 1000);
+    }, 1500);
   }
 
   didYouGetEaten() {
