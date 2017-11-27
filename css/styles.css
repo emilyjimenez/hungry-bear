@@ -4,6 +4,7 @@
 
 #restart {
   background-image: url("../img/losebear.gif");
+  background-repeat: no-repeat;
   min-height: 50vw;
 }
 
